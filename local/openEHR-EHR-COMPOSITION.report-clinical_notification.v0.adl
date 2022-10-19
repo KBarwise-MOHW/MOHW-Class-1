@@ -122,16 +122,6 @@ description
 The main Sections/Content component has been deliberately left unconstrained. This will allow it to be populated with any SECTION or ENTRY archetypes appropriate for the clinical purpose within a template. (en)">
 			misuse = <"*Not to be used to carry information about the subsequent investigation of a death or infectious disease for surveillance purposes. Use COMPOSITION.report-clinical_investigation for this purpose. (en)">
 		>
-		["sv"] = <
-			language = <[ISO_639-1::sv]>
-			purpose = <"*To carry information about a clinical notification of an infectious disease or significant health event. (en)">
-			keywords = <"rapport", ...>
-			copyright = <"© openEHR Foundation">
-			use = <"*Use to carry information about a clinical notification of an infectious disease or significant health event.
-
-The main Sections/Content component has been deliberately left unconstrained. This will allow it to be populated with any SECTION or ENTRY archetypes appropriate for the clinical purpose within a template. (en)">
-			misuse = <"*Not to be used to carry information about the subsequent investigation of a death or infectious disease for surveillance purposes. Use COMPOSITION.report-clinical_investigation for this purpose. (en)">
-		>
 		["fi"] = <
 			language = <[ISO_639-1::fi]>
 			purpose = <"*To carry information about a clinical notification of an infectious disease or significant health event. (en)">
@@ -142,10 +132,10 @@ The main Sections/Content component has been deliberately left unconstrained. Th
 The main Sections/Content component has been deliberately left unconstrained. This will allow it to be populated with any SECTION or ENTRY archetypes appropriate for the clinical purpose within a template. (en)">
 			misuse = <"*Not to be used to carry information about the subsequent investigation of a death or infectious disease for surveillance purposes. Use COMPOSITION.report-clinical_investigation for this purpose. (en)">
 		>
-		["nb"] = <
-			language = <[ISO_639-1::nb]>
+		["sv"] = <
+			language = <[ISO_639-1::sv]>
 			purpose = <"*To carry information about a clinical notification of an infectious disease or significant health event. (en)">
-			keywords = <"rapport","svar","svarrapport">
+			keywords = <"rapport", ...>
 			copyright = <"© openEHR Foundation">
 			use = <"*Use to carry information about a clinical notification of an infectious disease or significant health event.
 
@@ -156,6 +146,16 @@ The main Sections/Content component has been deliberately left unconstrained. Th
 			language = <[ISO_639-1::es-ar]>
 			purpose = <"*To carry information about a clinical notification of an infectious disease or significant health event. (en)">
 			keywords = <"informe", ...>
+			copyright = <"© openEHR Foundation">
+			use = <"*Use to carry information about a clinical notification of an infectious disease or significant health event.
+
+The main Sections/Content component has been deliberately left unconstrained. This will allow it to be populated with any SECTION or ENTRY archetypes appropriate for the clinical purpose within a template. (en)">
+			misuse = <"*Not to be used to carry information about the subsequent investigation of a death or infectious disease for surveillance purposes. Use COMPOSITION.report-clinical_investigation for this purpose. (en)">
+		>
+		["nb"] = <
+			language = <[ISO_639-1::nb]>
+			purpose = <"*To carry information about a clinical notification of an infectious disease or significant health event. (en)">
+			keywords = <"rapport","svar","svarrapport">
 			copyright = <"© openEHR Foundation">
 			use = <"*Use to carry information about a clinical notification of an infectious disease or significant health event.
 
@@ -192,16 +192,6 @@ The main Sections/Content component has been deliberately left unconstrained. Th
 The main Sections/Content component has been deliberately left unconstrained. This will allow it to be populated with any SECTION or ENTRY archetypes appropriate for the clinical purpose within a template. (en)">
 			misuse = <"*Not to be used to carry information about the subsequent investigation of a death or infectious disease for surveillance purposes. Use COMPOSITION.report-clinical_investigation for this purpose. (en)">
 		>
-		["en"] = <
-			language = <[ISO_639-1::en]>
-			purpose = <"To carry information about a clinical notification of an infectious disease or significant health event.">
-			keywords = <"report", ...>
-			copyright = <"© openEHR Foundation">
-			use = <"Use to carry information about a clinical notification of an infectious disease or significant health event.
-
-The main Sections/Content component has been deliberately left unconstrained. This will allow it to be populated with any SECTION or ENTRY archetypes appropriate for the clinical purpose within a template.">
-			misuse = <"Not to be used to carry information about the subsequent investigation of a death or infectious disease for surveillance purposes. Use COMPOSITION.report-clinical_investigation for this purpose.">
-		>
 		["ar-sy"] = <
 			language = <[ISO_639-1::ar-sy]>
 			purpose = <"*To carry information about a clinical notification of an infectious disease or significant health event. (en)">
@@ -211,6 +201,16 @@ The main Sections/Content component has been deliberately left unconstrained. Th
 
 The main Sections/Content component has been deliberately left unconstrained. This will allow it to be populated with any SECTION or ENTRY archetypes appropriate for the clinical purpose within a template. (en)">
 			misuse = <"*Not to be used to carry information about the subsequent investigation of a death or infectious disease for surveillance purposes. Use COMPOSITION.report-clinical_investigation for this purpose. (en)">
+		>
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To carry information about a clinical notification of an infectious disease or significant health event.">
+			keywords = <"report", ...>
+			copyright = <"© openEHR Foundation">
+			use = <"Use to carry information about a clinical notification of an infectious disease or significant health event.
+
+The main Sections/Content component has been deliberately left unconstrained. This will allow it to be populated with any SECTION or ENTRY archetypes appropriate for the clinical purpose within a template.">
+			misuse = <"Not to be used to carry information about the subsequent investigation of a death or infectious disease for surveillance purposes. Use COMPOSITION.report-clinical_investigation for this purpose.">
 		>
 		["it"] = <
 			language = <[ISO_639-1::it]>
@@ -250,7 +250,7 @@ The main Sections/Content component has been deliberately left unconstrained. Th
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"25953b57dd8d68dee1e7b155a4b77866">
+		["MD5-CAM-1.0.1"] = <"03bce67ccb79f76cdf9e5e06001f31ca">
 		["build_uid"] = <"84aafe68-a8cd-487a-9cff-5027ad9ae513">
 		["revision"] = <"0.0.1-alpha">
 	>
@@ -417,7 +417,7 @@ ontology
 				["at0.8"] = <
 					text = <"*Review type (en)">
 					description = <"*Identification of the category or level of review. (en)">
-					comment = <"*For example: review by the facility or institution where the notification was initiated; the local regional authority; or the national authority. (en)">
+					comment = <"*For example: review by the facility or institution where the notification was initiated; the  parish authority, local regional authority; or the national authority. (en)">
 				>
 				["at0.9"] = <
 					text = <"*Date report submitted (en)">
@@ -524,7 +524,7 @@ ontology
 				["at0.8"] = <
 					text = <"*Review type (en)">
 					description = <"*Identification of the category or level of review. (en)">
-					comment = <"*For example: review by the facility or institution where the notification was initiated; the local regional authority; or the national authority. (en)">
+					comment = <"*For example: review by the facility or institution where the notification was initiated; the  parish authority, local regional authority; or the national authority. (en)">
 				>
 				["at0.9"] = <
 					text = <"*Date report submitted (en)">
@@ -631,7 +631,7 @@ ontology
 				["at0.8"] = <
 					text = <"Review type">
 					description = <"Identification of the category or level of review.">
-					comment = <"For example: review by the facility or institution where the notification was initiated; the local regional authority; or the national authority.">
+					comment = <"For example: review by the facility or institution where the notification was initiated; the  parish authority, local regional authority; or the national authority.">
 				>
 				["at0.9"] = <
 					text = <"Date report submitted">
@@ -738,7 +738,7 @@ ontology
 				["at0.8"] = <
 					text = <"*Review type (en)">
 					description = <"*Identification of the category or level of review. (en)">
-					comment = <"*For example: review by the facility or institution where the notification was initiated; the local regional authority; or the national authority. (en)">
+					comment = <"*For example: review by the facility or institution where the notification was initiated; the  parish authority, local regional authority; or the national authority. (en)">
 				>
 				["at0.9"] = <
 					text = <"*Date report submitted (en)">
@@ -845,7 +845,7 @@ ontology
 				["at0.8"] = <
 					text = <"*Review type (en)">
 					description = <"*Identification of the category or level of review. (en)">
-					comment = <"*For example: review by the facility or institution where the notification was initiated; the local regional authority; or the national authority. (en)">
+					comment = <"*For example: review by the facility or institution where the notification was initiated; the  parish authority, local regional authority; or the national authority. (en)">
 				>
 				["at0.9"] = <
 					text = <"*Date report submitted (en)">
@@ -952,7 +952,7 @@ ontology
 				["at0.8"] = <
 					text = <"*Review type (en)">
 					description = <"*Identification of the category or level of review. (en)">
-					comment = <"*For example: review by the facility or institution where the notification was initiated; the local regional authority; or the national authority. (en)">
+					comment = <"*For example: review by the facility or institution where the notification was initiated; the  parish authority, local regional authority; or the national authority. (en)">
 				>
 				["at0.9"] = <
 					text = <"*Date report submitted (en)">
@@ -1059,7 +1059,7 @@ ontology
 				["at0.8"] = <
 					text = <"*Review type (en)">
 					description = <"*Identification of the category or level of review. (en)">
-					comment = <"*For example: review by the facility or institution where the notification was initiated; the local regional authority; or the national authority. (en)">
+					comment = <"*For example: review by the facility or institution where the notification was initiated; the  parish authority, local regional authority; or the national authority. (en)">
 				>
 				["at0.9"] = <
 					text = <"*Date report submitted (en)">
@@ -1166,7 +1166,7 @@ ontology
 				["at0.8"] = <
 					text = <"*Review type (en)">
 					description = <"*Identification of the category or level of review. (en)">
-					comment = <"*For example: review by the facility or institution where the notification was initiated; the local regional authority; or the national authority. (en)">
+					comment = <"*For example: review by the facility or institution where the notification was initiated; the  parish authority, local regional authority; or the national authority. (en)">
 				>
 				["at0.9"] = <
 					text = <"*Date report submitted (en)">
@@ -1273,7 +1273,7 @@ ontology
 				["at0.8"] = <
 					text = <"*Review type (en)">
 					description = <"*Identification of the category or level of review. (en)">
-					comment = <"*For example: review by the facility or institution where the notification was initiated; the local regional authority; or the national authority. (en)">
+					comment = <"*For example: review by the facility or institution where the notification was initiated; the  parish authority, local regional authority; or the national authority. (en)">
 				>
 				["at0.9"] = <
 					text = <"*Date report submitted (en)">
@@ -1381,7 +1381,7 @@ ontology
 				["at0.8"] = <
 					text = <"*Review type (en)">
 					description = <"*Identification of the category or level of review. (en)">
-					comment = <"*For example: review by the facility or institution where the notification was initiated; the local regional authority; or the national authority. (en)">
+					comment = <"*For example: review by the facility or institution where the notification was initiated; the  parish authority, local regional authority; or the national authority. (en)">
 				>
 				["at0.9"] = <
 					text = <"*Date report submitted (en)">
@@ -1488,7 +1488,7 @@ ontology
 				["at0.8"] = <
 					text = <"*Review type (en)">
 					description = <"*Identification of the category or level of review. (en)">
-					comment = <"*For example: review by the facility or institution where the notification was initiated; the local regional authority; or the national authority. (en)">
+					comment = <"*For example: review by the facility or institution where the notification was initiated; the  parish authority, local regional authority; or the national authority. (en)">
 				>
 				["at0.9"] = <
 					text = <"*Date report submitted (en)">
@@ -1595,7 +1595,7 @@ ontology
 				["at0.8"] = <
 					text = <"*Review type (en)">
 					description = <"*Identification of the category or level of review. (en)">
-					comment = <"*For example: review by the facility or institution where the notification was initiated; the local regional authority; or the national authority. (en)">
+					comment = <"*For example: review by the facility or institution where the notification was initiated; the  parish authority, local regional authority; or the national authority. (en)">
 				>
 				["at0.9"] = <
 					text = <"*Date report submitted (en)">
@@ -1703,7 +1703,7 @@ ontology
 				["at0.8"] = <
 					text = <"*Review type (en)">
 					description = <"*Identification of the category or level of review. (en)">
-					comment = <"*For example: review by the facility or institution where the notification was initiated; the local regional authority; or the national authority. (en)">
+					comment = <"*For example: review by the facility or institution where the notification was initiated; the  parish authority, local regional authority; or the national authority. (en)">
 				>
 				["at0.9"] = <
 					text = <"*Date report submitted (en)">
