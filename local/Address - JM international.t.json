@@ -24,9 +24,10 @@
       "Sign off" : "",
       "Speciality" : "",
       "User roles" : "",
-      "MD5-CAM-1.0.1" : "1fd53b6bf7ebdadd662928c9d686e796",
-      "sem_ver" : "2.2.0",
-      "build_uid" : ""
+      "MD5-CAM-1.0.1" : "abea2e7c2a9c16559eef34e2e0bbfacd",
+      "sem_ver" : "2.2.1",
+      "build_uid" : "",
+      "PARENT:MD5-CAM-1.0.1" : "2133C3C9ED943180AF0FD5076B412AD5"
     },
     "details" : {
       "en" : {
@@ -412,6 +413,13 @@
           "code" : "at0000.1",
           "text" : "Address - international",
           "description" : "Details about the location of a person, physical building or landmark."
+        },
+        "at0002.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0002",
+          "text" : "Town",
+          "description" : "The name of the suburb, town, city, village, community or lowest level locality that contains the address.",
+          "comment" : "Coding with an external terminology is preferred, where possible. For example: 'Fitzroy'; 'Bushy Park'; 'Porus' or 'Bergen'."
         }
       },
       "nb" : {
