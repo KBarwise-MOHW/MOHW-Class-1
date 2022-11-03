@@ -1,0 +1,133 @@
+archetype (adl_version=1.4; uid=152946ce-c6ca-48c0-8a7e-10dde4fab771)
+	openEHR-EHR-ADMIN_ENTRY.infectious_disease_investigation.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["date"] = <"2022-10-31">
+		["name"] = <"Heather Leslie">
+		["organisation"] = <"Atomica Informatics">
+		["email"] = <"heather.leslie@atomicainformatics.com">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"8e4551efe1dcd435a5fae42560d15e4a">
+		["build_uid"] = <"b49ed231-9c2d-35f0-8d7d-fb736885e223">
+	>
+
+definition
+	ADMIN_ENTRY[at0000] matches {    -- Infectious disease investigation
+		data matches {
+			ITEM_TREE[at0001] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0003] occurrences matches {0..1} matches {    -- Active case-searches?
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0004,    -- Yes
+									at0005,    -- No
+									at0006]    -- Unknown
+								}
+							}
+						}
+					}
+					ELEMENT[at0011] occurrences matches {0..1} matches {    -- Number of suspected cases detected
+						value matches {
+							DV_COUNT matches {*}
+						}
+					}
+					ELEMENT[at0007] occurrences matches {0..1} matches {    -- Other cases identified?
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0008,    -- Yes
+									at0009,    -- No
+									at0010]    -- Unknown
+								}
+							}
+						}
+					}
+					ELEMENT[at0002] occurrences matches {0..1} matches {    -- Outbreak setting
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Infectious disease investigation">
+					description = <"infectious_disease_investigation">
+				>
+				["at0001"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Outbreak setting">
+					description = <"The setting in which the individual was infected.">
+					comment = <"For example: household contact; community; healthcare facility; or unknown.">
+				>
+				["at0003"] = <
+					text = <"Active case-searches?">
+					description = <"Were active case-searches conducted?
+">
+				>
+				["at0004"] = <
+					text = <"Yes">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"No">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"Unknown">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"Other cases identified?">
+					description = <"Were other cases identified?">
+				>
+				["at0008"] = <
+					text = <"Yes">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"No">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"Unknown">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"Number of suspected cases detected">
+					description = <"The number of suspected cases detected during active case-search.">
+				>
+			>
+		>
+	>
