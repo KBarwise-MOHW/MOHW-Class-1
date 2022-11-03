@@ -1,0 +1,147 @@
+archetype (adl_version=1.4; uid=49eef972-f6c0-4d0a-9fdd-b99a697ea05c)
+	openEHR-EHR-EVALUATION.treatment_adherence.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["date"] = <"2022-10-21">
+		["name"] = <"Heather Leslie">
+		["organisation"] = <"Atomica Informatics">
+		["email"] = <"heather.leslie@atomicainformatics.com">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"aab9f6f2e6632edbf244a0a90a621269">
+		["build_uid"] = <"1926fc28-b2ec-39be-95cc-6b46fd7ff41e">
+	>
+
+definition
+	EVALUATION[at0000] matches {    -- Treatment adherence assessment
+		data matches {
+			ITEM_TREE[at0001] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0002] occurrences matches {0..1} matches {    -- Type of treatment
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0003] occurrences matches {0..1} matches {    -- Description
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0004] occurrences matches {0..1} matches {    -- Barriers identified?
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0005,    -- Yes
+									at0006]    -- No
+								}
+							}
+						}
+					}
+					ELEMENT[at0007] occurrences matches {0..*} matches {    -- Barrier
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0011] occurrences matches {0..*} matches {    -- Source of financial support
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0008] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					allow_archetype CLUSTER[at0009] occurrences matches {0..*} matches {    -- Extension
+						include
+							archetype_id/value matches {/.*/}
+					}
+					ELEMENT[at0010] occurrences matches {0..1} matches {    -- Last updated
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Treatment adherence assessment">
+					description = <"Treatment adherence">
+				>
+				["at0001"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Type of treatment">
+					description = <"Identification of the type of treatment required.">
+					comment = <"For example: medication regime; Tuberculosis treatment program.">
+				>
+				["at0003"] = <
+					text = <"Description">
+					description = <"Narrative description about the drivers, issues or barriers to adherence to the proposed or current treatment">
+				>
+				["at0004"] = <
+					text = <"Barriers identified?">
+					description = <"Identification of barriers or issues related to treatment adherence.">
+				>
+				["at0005"] = <
+					text = <"Yes">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"No">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"Barrier">
+					description = <"Identification of a specific barrier to treatment adherence.">
+					comment = <"This data element has multiple occurrences to enable more than one barrier to be recorded. Coding of 'Barrier' with a coding system is desirable, if available. ">
+				>
+				["at0008"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0009"] = <
+					text = <"Extension">
+					description = <"Additional information required to extend the model with local content or to align with other reference models or formalisms.">
+					comment = <"For example: local information requirements; or additional metadata to align with FHIR.">
+				>
+				["at0010"] = <
+					text = <"Last updated">
+					description = <"Date when the treatment adherence assessment was updated.">
+				>
+				["at0011"] = <
+					text = <"Source of financial support">
+					description = <"Description about the source of funding that will support appropriate treatment to be carried out.">
+					comment = <"For example: the source of funding that will support a TB patient to provide for their family, meet treatment costs etc.">
+				>
+			>
+		>
+	>
